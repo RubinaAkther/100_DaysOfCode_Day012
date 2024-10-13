@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', serif;
+}
+
+:root {
+  /* *** Primary *** */
+
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* ***  Neutral  *** */
+
+  --Very-dark-blue: hsl(217, 54%, 11%);
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  color: var(--White);
+}
+
+/*
+===========================================
+Main Container Start 
+===========================================
+*/
+
+.card {
+  width: 350px;
+  min-height: 300px;
+  background-color: var(--Very-dark-blue-card);
+  padding: 20px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 50px hsl(217, 54%, 6%);
+}
+
+.card-img {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.cube-img {
+  width: 100%;
+  height: 300px;
+}
+
+.cube-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+.eye-img {
+  background-color: hsla(178, 100%, 50%, 0.386);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.eye-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-img:hover .eye-img {
+  opacity: 1;
+  visibility: visible;
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--Cyan);
+}
+
+.description {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--Soft-blue);
+  margin-bottom: 1.2rem;
+}
+
+.connect-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.connect-left-column {
+  color: var(--Cyan);
+  display: flex;
+  align-items: center;
+}
+
+.connect-left-column img {
+  margin-right: 10px;
+}
+
+.connect-right-coulumn {
+  display: flex;
+  align-items: center;
+  color: var(--Soft-blue);
+  font-weight: 300;
+}
+
+.connect-right-coulumn img {
+  margin-right: 10px;
+}
+
+.border {
+  width: 100%;
+  height: 2px;
+  background-color: var(--Very-dark-blue-line);
+  margin-top: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-img {
+  width: 42px;
+  height: 42px;
+  background-color: var(--White);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-content {
+  font-weight: 300;
+  color: var(--Soft-blue);
+}
+
+.profile-name {
+  color: var(--White);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.profile-name:hover {
+  color: var(--Cyan);
+}
+
+/*
+===========================================
+Main Container End
+===========================================
+*/
